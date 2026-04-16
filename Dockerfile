@@ -1,5 +1,6 @@
-FROM ubuntu:20.04
-RUN apt update && apt install -y python3
-WORKDIR /app 
+FROM python:3.9-slim
+
+WORKDIR /app
 COPY . .
-CMD ["python3", "app.py"]
+
+CMD ["python", "app.py"]
