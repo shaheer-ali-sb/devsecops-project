@@ -1,6 +1,11 @@
 FROM python:3.11-slim
 
 WORKDIR /app
+
 COPY . .
-CMD ["python3", "app.py"]
-# trigger pipeline
+
+RUN pip install flask
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
